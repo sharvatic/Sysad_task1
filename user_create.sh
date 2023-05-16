@@ -2,15 +2,6 @@
 
 cd /
 
-
-chown AG_warden /home/GA_warden/mydir/Announcements.txt
-chown AG_warden /home/GA_warden/mydir/Feedefaulters.txt
-chown AG_warden /home/GA_warden/mydir/Signout.txt
-chown AG_warden /home/GA_warden/mydir/Leave.sh
-chown AG_warden /home/GA_warden/mydir/fee_defaulters.sh
-
-
-
 useradd -m HAD >/dev/null;echo "HAD:admin@123" | sudo chpasswd
 
 useradd -m GA_warden >/dev/null;echo "GA_warden:admin@123" | sudo chpasswd
@@ -28,9 +19,9 @@ setfacl -m u:HAD:rwx /home/OP_warden
 mkdir /home/HAD/mydir
 mkdir /mydir
 setfacl -m u:HAD:rwx /mydir
-cp /home/sharvwadhavekar/Documents/studentDetails.txt /home/HAD/mydir/studentDetails.txt
-cp /home/sharvwadhavekar/Documents/mess.txt /home/HAD/mydir/mess.txt
-cp /home/sharvwadhavekar/Documents/messalloc.sh /home/HAD/mydir/messalloc.sh
+cp /home/studentDetails.txt /home/HAD/mydir/studentDetails.txt
+cp /home/mess.txt /home/HAD/mydir/mess.txt
+cp /home/messalloc.sh /home/HAD/mydir/messalloc.sh
 
 chown HAD /home/HAD/mydir/studentDetails.txt
 chmod 777 /home/HAD/mydir/studentDetails.txt
@@ -59,11 +50,11 @@ touch /home/GA_warden/mydir/Signout.txt
 chown GA_warden /home/GA_warden/mydir/Signout.txt
 chmod 770 /home/GA_warden/mydir/Signout.txt
 
-cp /home/sharvwadhavekar/Documents/Leave.sh /home/GA_warden/mydir/Leave.sh
+cp /home/Leave.sh /home/GA_warden/mydir/Leave.sh
 chown GA_warden /home/GA_warden/mydir/Leave.sh
 chmod 770 /home/GA_warden/mydir/Leave.sh
 
-cp /home/sharvwadhavekar/Documents/fee_defaulters.sh /home/GA_warden/mydir/fee_defaulters.sh
+cp /home/fee_defaulters.sh /home/GA_warden/mydir/fee_defaulters.sh
 chown GA_warden /home/GA_warden/mydir/fee_defaulters.sh
 chmod 770 /home/GA_warden/mydir/fee_defaulters.sh
 
@@ -89,11 +80,11 @@ touch /home/GB_warden/mydir/Signout.txt
 chown GB_warden /home/GB_warden/mydir/Signout.txt
 chmod 775 /home/GA_warden/mydir/Signout.txt
 
-cp /home/sharvwadhavekar/Documents/Leave.sh /home/GB_warden/mydir/Leave.sh
+cp /home/Leave.sh /home/GB_warden/mydir/Leave.sh
 chown GB_warden /home/GB_warden/mydir/Leave.sh
 chmod 775 /home/GB_warden/mydir/Leave.sh
 
-cp /home/sharvwadhavekar/Documents/fee_defaulters.sh /home/GB_warden/mydir/fee_defaulters.sh
+cp /home/fee_defaulters.sh /home/GB_warden/mydir/fee_defaulters.sh
 chown GB_warden /home/GB_warden/mydir/fee_defaulters.sh
 chmod 775 /home/GB_warden/mydir/fee_defaulters.sh
 
@@ -115,10 +106,10 @@ chmod 775 /home/AG_warden/mydir/Feedefaulters.txt
 touch /home/AG_warden/mydir/Signout.txt
 chmod 775 /home/AG_warden/mydir/Signout.txt
 
-cp /home/sharvwadhavekar/Documents/Leave.sh /home/AG_warden/mydir/Leave.sh
+cp /home/Leave.sh /home/AG_warden/mydir/Leave.sh
 chmod 775 /home/AG_warden/mydir/Leave.sh
 
-cp /home/sharvwadhavekar/Documents/fee_defaulters.sh /home/AG_warden/mydir/fee_defaulters.sh
+cp /home/fee_defaulters.sh /home/AG_warden/mydir/fee_defaulters.sh
 chmod 775 /home/AG_warden/mydir/fee_defaulters.sh
 
 chown AG_warden /home/GA_warden/mydir/Announcements.txt
@@ -145,10 +136,10 @@ chmod 775 /home/OP_warden/mydir/Feedefaulters.txt
 touch /home/GA_warden/mydir/Signout.txt
 chmod 775 /home/GA_warden/mydir/Signout.txt
 
-cp /home/sharvwadhavekar/Documents/Leave.sh /home/OP_warden/mydir/Leave.sh
+cp /home/Leave.sh /home/OP_warden/mydir/Leave.sh
 chmod 775 /home/OP_warden/mydir/Leave.sh
 
-cp /home/sharvwadhavekar/Documents/fee_defaulters.sh /home/OP_warden/mydir/fee_defaulters.sh
+cp /home/fee_defaulters.sh /home/OP_warden/mydir/fee_defaulters.sh
 chmod 775 /home/OP_warden/mydir/fee_defaulters.sh
 
 chown OP_warden /home/GA_warden/mydir/Announcements.txt
@@ -193,24 +184,24 @@ fi
    chmod 750 /home/$user/Userdetails.txt
    setfacl -m u:HAD:rwx /home/$user/Userdetails.txt
    
-   cp /home/sharvwadhavekar/Documents/mess_reg.sh /home/$user/mess_reg.sh
+   cp /home/mess_reg.sh /home/$user/mess_reg.sh
    chown $user /home/$user/mess_reg.sh
    chmod 750 /home/$user/mess_reg.sh
    setfacl -m u:HAD:rwx /home/$user/mess_reg.sh
    
-   cp /home/sharvwadhavekar/Documents/fees.txt /home/$user/fees.txt
+   cp /home/fees.txt /home/$user/fees.txt
    chown $user /home/$user/fees.txt
    chmod 750 /home/$user/fees.txt
    setfacl -m u:HAD:rwx /home/$user/fees.txt
    
    
-   cp /home/sharvwadhavekar/Documents/Fees.sh /home/$user/fees.sh
+   cp /home/Fees.sh /home/$user/fees.sh
    chown $user /home/$user/fees.sh
    chmod 750 /home/$user/fees.sh
    setfacl -m u:HAD:rwx /home/$user/fees.sh
    
     	
-   cp /home/sharvwadhavekar/Documents/Permission.txt /home/$user/Permission.txt
+   cp /home/Permission.txt /home/$user/Permission.txt
    chown $user /home/$user/Permission.txt
    chmod 750 /home/$user/Permission.txt
    setfacl -m u:HAD:rwx /home/$user/Permission.txt
