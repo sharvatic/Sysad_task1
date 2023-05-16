@@ -1,0 +1,7 @@
+S.no Category Amount Status
+1 Tuition 50000 Pending
+2 Hostel 20000 Pending
+3 Service 10000 Pending
+4 Messfee 20000 Pending
+
+Amount remaining = 100000
