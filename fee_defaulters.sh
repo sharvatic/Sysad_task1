@@ -2,7 +2,6 @@
 
 # SCRIPT IS BEING RUN BY HOSTEL WARDENS
 
-ward=$(whoami)
 
 rnum=$(awk '{print $2}' /mydir/studentDetails.txt)
 
@@ -25,21 +24,21 @@ echo "Enter your password"
 
 if [ $ward == GA_warden ]
 then
-su - root -c "cp -rp /home/$ward/mydir/* /mydir1"
+sudo su - root -c "cp -rp /home/$ward/mydir/* /mydir1"
 fi
 
 if [ $ward == GB_warden ]
 then
-su - root -c "cp -rp /home/$ward/mydir/* /mydir2"
+sudo su - root -c "cp -rp /home/$ward/mydir/* /mydir2"
 fi
 
 if [ $ward == AG_warden ]
 then
-su - root -c "cp -rp /home/$ward/mydir/* /mydir3"
+sudo su - root -c "cp -rp /home/$ward/mydir/* /mydir3"
 fi
 
 if [ $ward == OP_warden ]
 then
-su - root -c "cp -rp /home/$ward/mydir/* /mydir4"
+sudo su - root -c "cp -rp /home/$ward/mydir/* /mydir4"
 fi
 
