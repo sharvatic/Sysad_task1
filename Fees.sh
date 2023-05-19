@@ -74,6 +74,8 @@ then
       if [ $lines -lt 6 ]
       then
          echo $rnum >>/mydir1/Announcements.txt
+	 echo "Please enter your password for final conformation"
+	 sudo su - root -c "cp -rp /mydir1/* /home/GA_warden/mydir"
       fi
    fi
    
@@ -84,6 +86,8 @@ then
       if [ $lines -lt 6 ]
       then
          echo $rnum >>/mydir2/Announcements.txt
+	 echo "Please enter your password for final conformation"
+	 sudo su - root -c "cp -rp /mydir2/* /home/GB_warden/mydir"
       fi
    fi
    
@@ -94,6 +98,8 @@ then
       if [ $lines -lt 6 ]
       then
          echo $rnum >>/mydir3/Announcements.txt
+	 echo "Please enter your password for final conformation"
+	 sudo su - root -c "cp -rp /mydir3/* /home/AG_warden/mydir"
       fi
    fi
    
@@ -104,6 +110,8 @@ then
       if [ $lines -lt 6 ]
       then
          echo $rnum >>/mydir4/Announcements.txt
+	 echo "Please enter your password for final conformation"
+	 sudo su - root -c "cp -rp /mydir4/* /home/OP_warden/mydir"
       fi
    fi
 fi
