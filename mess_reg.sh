@@ -28,9 +28,8 @@ else
 echo "User not permitted to register for mess"
 fi
 
-#####################################
-#echo "Please enter your password for final conformation"
+echo "Please enter your password for final conformation"
 
-#su - root -c "cp -rp /mydir/* /home/HAD/mydir"
+sudo su - root -c "cp -rp /mydir/* /home/HAD/mydir"
 
 
