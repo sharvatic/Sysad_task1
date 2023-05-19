@@ -16,21 +16,21 @@ hostel=$(awk 'NR == 2 {print $3}' Userdetails.txt)
 
   if [ $Hostel == GarnetA ]
    then
-      su - root -c "echo $rnum $dep_dt $arr_dt >>/home/GA_warden/mydir/Signout.txt"
+      sudo su - root -c "echo $rnum $dep_dt $arr_dt >>/home/GA_warden/mydir/Signout.txt"
    fi
    
    if [ $Hostel == GarnetB ]
    then
-      su - root -c "echo $rnum $dep_dt $arr_dt >/home/GB_warden/mydir/Signout.txt"
+      sudo su - root -c "echo $rnum $dep_dt $arr_dt >/home/GB_warden/mydir/Signout.txt"
    fi
    
    if [ $Hostel == Agate ]
    then
-      su - root -c "echo $rnum $dep_dt $arr_dt >/home/AG_warden/mydir/Signout.txt"
+      sudo su - root -c "echo $rnum $dep_dt $arr_dt >/home/AG_warden/mydir/Signout.txt"
    fi
    
    if [ $Hostel == Opal ]
    then
-      su - root -c "echo $rnum $dep_dt $arr_dt >/home/OP_warden/mydir/Signout.txt"
+      sudo su - root -c "echo $rnum $dep_dt $arr_dt >/home/OP_warden/mydir/Signout.txt"
    fi
    
