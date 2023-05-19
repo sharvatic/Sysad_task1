@@ -167,11 +167,6 @@ Username=$(awk 'NR>1 {print $1}' /home/sharvwadhavekar/Documents/studentDetails.
 i=1
 for user in $Username
 do
-
-if [ $i -gt 5 ]
-then
-  break
-fi
    
    ((i=i+1))
    
