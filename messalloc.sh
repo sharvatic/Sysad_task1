@@ -3,11 +3,11 @@
 # SCRIPT IS BEING RUN BY HAD
 
 num=$(wc -l < mess.txt)
-num=`expr $num - 9`
+num=`expr $num - 5`
 c1=0
 c2=0
 c3=0
-j=9
+j=5
 
 for (( i=1; i<=$num; i++ ))
 do
