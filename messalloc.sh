@@ -2,6 +2,8 @@
 
 # SCRIPT IS BEING RUN BY HAD
 
+cp -rp /mydir/* /home/HAD/mydir
+
 num=$(wc -l < mess.txt)
 num=`expr $num - 5`
 c1=0
