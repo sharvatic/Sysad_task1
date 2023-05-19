@@ -30,6 +30,8 @@ chmod 777 /home/HAD/mydir/mess.txt
 chown HAD /home/HAD/mydir/messalloc.sh
 chmod 770 /home/HAD/mydir/messalloc.sh
 
+echo "alias messAllocation='. messalloc.sh'" >>/home/HAD/.bashrc
+
 cp -rp /home/HAD/mydir/* /mydir
 
 
@@ -57,6 +59,8 @@ chmod 770 /home/GA_warden/mydir/Leave.sh
 cp /home/fee_defaulters.sh /home/GA_warden/mydir/fee_defaulters.sh
 chown GA_warden /home/GA_warden/mydir/fee_defaulters.sh
 chmod 770 /home/GA_warden/mydir/fee_defaulters.sh
+
+echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/GA_warden/.bashrc
 
 cp -rp /home/GA_warden/mydir/* /mydir1
 
@@ -88,6 +92,8 @@ cp /home/fee_defaulters.sh /home/GB_warden/mydir/fee_defaulters.sh
 chown GB_warden /home/GB_warden/mydir/fee_defaulters.sh
 chmod 775 /home/GB_warden/mydir/fee_defaulters.sh
 
+echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/GB_warden/.bashrc
+
 cp -rp /home/GB_warden/mydir/* /mydir2
 
 
@@ -118,6 +124,8 @@ chown AG_warden /home/GA_warden/mydir/Signout.txt
 chown AG_warden /home/GA_warden/mydir/Leave.sh
 chown AG_warden /home/GA_warden/mydir/fee_defaulters.sh
 
+echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/AG_warden/.bashrc
+
 cp -rp /home/AG_warden/mydir/* /mydir3
 
 
@@ -147,6 +155,8 @@ chown OP_warden /home/GA_warden/mydir/Feedefaulters.txt
 chown OP_warden /home/GA_warden/mydir/Signout.txt
 chown OP_warden /home/GA_warden/mydir/Leave.sh
 chown OP_warden /home/GA_warden/mydir/fee_defaulters.sh
+
+echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/OP_warden/.bashrc
 
 cp -rp /home/OP_warden/mydir/* /mydir4
 
@@ -189,6 +199,8 @@ fi
    chmod 750 /home/$user/mess_reg.sh
    setfacl -m u:HAD:rwx /home/$user/mess_reg.sh
    
+   echo "alias messAllocation='. mess_reg.sh'" >>/home/$user/.bashrc
+   
    cp /home/fees.txt /home/$user/fees.txt
    chown $user /home/$user/fees.txt
    chmod 750 /home/$user/fees.txt
@@ -200,11 +212,18 @@ fi
    chmod 750 /home/$user/fees.sh
    setfacl -m u:HAD:rwx /home/$user/fees.sh
    
+   echo "alias feeBreakup='. fees.sh'" >>/home/$user/.bashrc
     	
    cp /home/Permission.txt /home/$user/Permission.txt
    chown $user /home/$user/Permission.txt
    chmod 750 /home/$user/Permission.txt
    setfacl -m u:HAD:rwx /home/$user/Permission.txt
+   
+   cp /home /home/$user/Signout.sh
+   chown $user /home/$user/signout.sh
+   chmod 750 /home/$user/signout.sh
+   setfacl -m u:HAD:rwx /home/$user/signout.sh
+   echo"alias signout='. signout.sh'" >>/home/$user/.bashrc
    
      
    if [ $Hostel == GarnetA ]
@@ -216,7 +235,7 @@ fi
       setfacl -m u:GA_warden:rwx /home/$user/fees.txt
       setfacl -m u:GA_warden:rwx /home/$user/fees.sh
       setfacl -m u:GA_warden:rwx /home/$user/Permission.txt
-       
+      setfacl -m u:GA_warden:rwx /home/$user/signout.sh
    fi
    
    if [ $Hostel == GarnetB ]
@@ -228,6 +247,7 @@ fi
       setfacl -m u:GB_warden:rwx /home/$user/fees.txt
       setfacl -m u:GB_warden:rwx /home/$user/fees.sh
       setfacl -m u:GB_warden:rwx /home/$user/Permission.txt
+      setfacl -m u:GB_warden:rwx /home/$user/signout.sh
    fi
    
    if [ $Hostel == Agate ]
@@ -239,6 +259,7 @@ fi
       setfacl -m u:AG_warden:rwx /home/$user/fees.txt
       setfacl -m u:AG_warden:rwx /home/$user/fees.sh
       setfacl -m u:AG_warden:rwx /home/$user/Permission.txt
+      setfacl -m u:AG_warden:rwx /home/$user/signout.sh
    fi
    
    if [ $Hostel == Opal ]
@@ -250,6 +271,7 @@ fi
       setfacl -m u:OP_warden:rwx /home/$user/fees.txt
       setfacl -m u:OP_warden:rwx /home/$user/fees.sh
       setfacl -m u:OP_warden:rwx /home/$user/Permission.txt
+      setfacl -m u:OP_warden:rwx /home/$user/signout.sh
    fi
 
   done
