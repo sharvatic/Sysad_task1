@@ -14,6 +14,10 @@ Run the following commands to get the files
 ```
 git clone https://github.com/sharvatic/Sysad_task1.git
 ```
+Set alias genStudent in the .bashrc file in the /home directory 
+```
+alias genStudent='. user_create.sh'
+```
 HAD and the wardens have a directory called "mydir" which has all files related to the server
 Aliases that are to be run for HAD or the wardens should be run from this directory
 
