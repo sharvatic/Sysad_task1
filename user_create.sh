@@ -31,6 +31,7 @@ chown HAD /home/HAD/mydir/messalloc.sh
 chmod 770 /home/HAD/mydir/messalloc.sh
 
 echo "alias messAllocation='. messalloc.sh'" >>/home/HAD/.bashrc
+source /home/HAD/.bashrc
 
 cp -rp /home/HAD/mydir/* /mydir
 
@@ -61,6 +62,7 @@ chown GA_warden /home/GA_warden/mydir/fee_defaulters.sh
 chmod 770 /home/GA_warden/mydir/fee_defaulters.sh
 
 echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/GA_warden/.bashrc
+source /home/GA_warden/.bashrc
 
 cp -rp /home/GA_warden/mydir/* /mydir1
 
@@ -93,6 +95,7 @@ chown GB_warden /home/GB_warden/mydir/fee_defaulters.sh
 chmod 775 /home/GB_warden/mydir/fee_defaulters.sh
 
 echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/GB_warden/.bashrc
+source /home/GB_warden/.bashrc
 
 cp -rp /home/GB_warden/mydir/* /mydir2
 
@@ -125,6 +128,7 @@ chown AG_warden /home/GA_warden/mydir/Leave.sh
 chown AG_warden /home/GA_warden/mydir/fee_defaulters.sh
 
 echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/AG_warden/.bashrc
+source /home/AG_warden/.bashrc
 
 cp -rp /home/AG_warden/mydir/* /mydir3
 
@@ -157,6 +161,7 @@ chown OP_warden /home/GA_warden/mydir/Leave.sh
 chown OP_warden /home/GA_warden/mydir/fee_defaulters.sh
 
 echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/OP_warden/.bashrc
+source /home/OP_warden/.bashrc
 
 cp -rp /home/OP_warden/mydir/* /mydir4
 
@@ -195,6 +200,7 @@ do
    setfacl -m u:HAD:rwx /home/$user/mess_reg.sh
    
    echo "alias messAllocation='. mess_reg.sh'" >>/home/$user/.bashrc
+   source /home/$user/.bashrc
    
    cp /home/fees.txt /home/$user/fees.txt
    chown $user /home/$user/fees.txt
@@ -208,6 +214,7 @@ do
    setfacl -m u:HAD:rwx /home/$user/fees.sh
    
    echo "alias feeBreakup='. fees.sh'" >>/home/$user/.bashrc
+   source /home/$user/.bashrc
     	
    cp /home/Permission.txt /home/$user/Permission.txt
    chown $user /home/$user/Permission.txt
@@ -219,6 +226,7 @@ do
    chmod 750 /home/$user/signout.sh
    setfacl -m u:HAD:rwx /home/$user/signout.sh
    echo"alias signout='. signout.sh'" >>/home/$user/.bashrc
+   source /home/$user/.bashrc
    
      
    if [ $Hostel == GarnetA ]
