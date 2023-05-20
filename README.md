@@ -12,6 +12,7 @@ sudo -i
 ```
 Run the following commands to get the files
 ```
+cd /home
 git clone https://github.com/sharvatic/Sysad_task1.git
 ```
 Set alias genStudent in the .bashrc file in the /home directory 
