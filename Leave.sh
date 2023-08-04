@@ -9,7 +9,7 @@ awk '{print $0}' New.txt
 rnum=$(awk '{print $1}' New.txt)
 grep "$rnum" /mydir/studentDetails.txt >New.txt
 user=$(awk '{print $1}' New.txt)
-
+rm New.txt
 
 echo "Do you want to provide permission [y/n]"
 read in
