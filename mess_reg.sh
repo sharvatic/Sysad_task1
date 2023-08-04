@@ -13,11 +13,10 @@ echo "Fill up the mess preferences below like pref1>pref2>pref3 without spaces"
 echo "For example 3>1>2 where number denotes the number of the mess"
 read input
 
-sed -e "/$Roll/s/-/$input/" Userdetails.txt > New.txt
-cp New.txt Userdetails.txt
+sed -i -e "/$Roll/s/-/$input/" Userdetails.txt 
 
-sed -e "/$Roll/s/-/$input/" /mydir/studentDetails.txt > New.txt
-cp New.txt /mydir/studentDetails.txt
+sed -i -e "/$Roll/s/-/$input/" /mydir/studentDetails.txt 
+
 
 rm New.txt
 
@@ -31,5 +30,4 @@ fi
 echo "Please enter your password for final conformation"
 
 sudo su - root -c "cp -rp /mydir/* /home/HAD/mydir"
-
 
