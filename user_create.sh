@@ -121,11 +121,11 @@ chmod 775 /home/AG_warden/mydir/Leave.sh
 cp /home/fee_defaulters.sh /home/AG_warden/mydir/fee_defaulters.sh
 chmod 775 /home/AG_warden/mydir/fee_defaulters.sh
 
-chown AG_warden /home/GA_warden/mydir/Announcements.txt
-chown AG_warden /home/GA_warden/mydir/Feedefaulters.txt
-chown AG_warden /home/GA_warden/mydir/Signout.txt
-chown AG_warden /home/GA_warden/mydir/Leave.sh
-chown AG_warden /home/GA_warden/mydir/fee_defaulters.sh
+chown AG_warden /home/AG_warden/mydir/Announcements.txt
+chown AG_warden /home/AG_warden/mydir/Feedefaulters.txt
+chown AG_warden /home/AG_warden/mydir/Signout.txt
+chown AG_warden /home/AG_warden/mydir/Leave.sh
+chown AG_warden /home/AG_warden/mydir/fee_defaulters.sh
 
 echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/AG_warden/.bashrc
 source /home/AG_warden/.bashrc
@@ -154,18 +154,18 @@ chmod 775 /home/OP_warden/mydir/Leave.sh
 cp /home/fee_defaulters.sh /home/OP_warden/mydir/fee_defaulters.sh
 chmod 775 /home/OP_warden/mydir/fee_defaulters.sh
 
-chown OP_warden /home/GA_warden/mydir/Announcements.txt
-chown OP_warden /home/GA_warden/mydir/Feedefaulters.txt
-chown OP_warden /home/GA_warden/mydir/Signout.txt
-chown OP_warden /home/GA_warden/mydir/Leave.sh
-chown OP_warden /home/GA_warden/mydir/fee_defaulters.sh
+chown OP_warden /home/OP_warden/mydir/Announcements.txt
+chown OP_warden /home/OP_warden/mydir/Feedefaulters.txt
+chown OP_warden /home/OP_warden/mydir/Signout.txt
+chown OP_warden /home/OP_warden/mydir/Leave.sh
+chown OP_warden /home/OP_warden/mydir/fee_defaulters.sh
 
 echo "alias updateDefaulter='. fee_defaulters.sh'" >>/home/OP_warden/.bashrc
 source /home/OP_warden/.bashrc
 
 cp -rp /home/OP_warden/mydir/* /mydir4
 
-Username=$(awk 'NR>1 {print $1}' /home/sharvwadhavekar/Documents/studentDetails.txt)
+Username=$(awk 'NR>1 {print $1}' /home/studentDetails.txt)
 
 #password=admin@123
 
